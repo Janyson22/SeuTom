@@ -1,25 +1,126 @@
+/* @import url (https:// */
+
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
-body {
-    background-color: #fff;
+h2 {
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #e6cf09;
 }
 
-.painel {
-    width: 305px;
-    height: 305px;
-    border-radius: 10px;
-}
-.modal{
-    position: absolute;
-    transition: all .5s;
+h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #e6cf09;
 }
 
-#modalCantor {
-    background: #ccc;
+
+a{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: rgb(53, 53, 53);
+}
+
+#card-nome-cantor{
+    font-size: 40px;
+    font-weight: 9004;
+}
+
+.header{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    background: #000;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.column{
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.card{
+    position: relative;
+    max-width: 800px;
+    height: 150px;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgb(83, 83, 83, 0.2);
+    text-align: center;
+    background-color: #212020;
+}
+
+.card:hover {
+    transform: translate(0, -10%);
+    transition: 0.5s;
+}
+
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 500px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgb(0, 0, 0, 0.3);
+    background: #fff;
+    visibility: hidden;
     opacity: 0;
-    z-index: -1;
+    transition: 0.5;
+}
+
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(./logo.png);
+    background-size: cover;
+}
+
+@media screen and (max-width: 60px){
+    .column{
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .header{
+    width: 100%;
+    }
+
+    .header img {
+    max-width: 350px;
+    }
+
 }
